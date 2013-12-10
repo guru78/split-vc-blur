@@ -109,19 +109,18 @@
 
 - (void) configurePortraitTable
 {
-    const CGFloat scaleValue = 8;
-    CGSize contextSize = CGSizeMake(self.detailViewController.view.frame.size.width / scaleValue , self.detailViewController.view.frame.size.height / scaleValue);
+    CGSize contextSize = CGSizeMake(self.detailViewController.view.frame.size.width, self.detailViewController.view.frame.size.height);
     UIGraphicsBeginImageContextWithOptions(contextSize, YES, 1);
     CGRect drawingRect = CGRectMake(0, 0, contextSize.width, contextSize.height);
     [self.detailViewController.view drawViewHierarchyInRect:drawingRect afterScreenUpdates:NO];
     UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    CGRect subRect = CGRectMake(0, 0, self.view.frame.size.width / scaleValue, self.view.frame.size.height / scaleValue);
+    CGRect subRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     CGImageRef subImage = CGImageCreateWithImageInRect(snapshotImage.CGImage, subRect);
     UIImage *backgroundImage = [UIImage imageWithCGImage:subImage];
     CGImageRelease(subImage);
     
-    UIImage *darkImage = [backgroundImage applyDarkEffectWithTent:5];
+    UIImage *darkImage = [backgroundImage applyDarkEffect];
     [(UIImageView *)self.tableView.backgroundView setImage:darkImage];
 }
 

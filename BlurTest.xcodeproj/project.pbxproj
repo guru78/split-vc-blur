@@ -228,8 +228,11 @@
 			attributes = {
 				CLASSPREFIX = BlT;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Haywoodsoft LLC";
+				ORGANIZATIONNAME = "Uncorked Studios";
 				TargetAttributes = {
+					C97F5D3317E8E05900CF6AB8 = {
+						DevelopmentTeam = GW9LN5A7NP;
+					};
 					C97F5D5717E8E05900CF6AB8 = {
 						TestTargetID = C97F5D3317E8E05900CF6AB8;
 					};
@@ -417,7 +420,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Wymore (EKGQV4K96L)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurTest/BlurTest-Prefix.pch";
 				INFOPLIST_FILE = "BlurTest/BlurTest-Info.plist";
@@ -432,6 +436,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurTest/BlurTest-Prefix.pch";
 				INFOPLIST_FILE = "BlurTest/BlurTest-Info.plist";

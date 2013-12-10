@@ -65,6 +65,8 @@
 		C97F5D7317E8E89200CF6AB8 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		C97F5D7417E8E89200CF6AB8 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C97F5D7A17E8FA3500CF6AB8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C9AF31F6185788CD00AA629C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C9AF31F7185788CD00AA629C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C9DDBA4817EB5C5900E7EC23 /* doggyLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doggyLeft.png; sourceTree = "<group>"; };
 		C9DDBA4917EB5C5900E7EC23 /* doggyLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doggyLeft@2x.png"; sourceTree = "<group>"; };
 		C9DDBA4A17EB5C5900E7EC23 /* doggy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doggy.png; sourceTree = "<group>"; };
@@ -99,6 +101,8 @@
 		C97F5D2B17E8E05900CF6AB8 = {
 			isa = PBXGroup;
 			children = (
+				C9AF31F6185788CD00AA629C /* LICENSE */,
+				C9AF31F7185788CD00AA629C /* README.md */,
 				C97F5D3D17E8E05900CF6AB8 /* BlurTest */,
 				C97F5D5F17E8E05900CF6AB8 /* BlurTestTests */,
 				C97F5D3617E8E05900CF6AB8 /* Frameworks */,

@@ -97,7 +97,7 @@
 {
     if (!self.landscapeBackground)
     {
-        self.landscapeBackground = [[UIImage imageNamed:@"doggyLeft.png"] applyDarkEffectWithTent:20];
+        self.landscapeBackground = [[UIImage imageNamed:@"doggyLeft.png"] applyDarkEffect];
     }
     
     //Can do a simple pointer compare since we cache the landscape background

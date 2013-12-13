@@ -109,18 +109,27 @@
 
 - (void) configurePortraitTable
 {
+    //set up the graphics context to render the screen snapshot. Note the scale value... Values greater than 1 make a context smaller than
+    //the detail view controller. Smaller context means faster rendering of the final blurred background image
     const CGFloat scaleValue = 8;
     CGSize contextSize = CGSizeMake(self.detailViewController.view.frame.size.width / scaleValue , self.detailViewController.view.frame.size.height / scaleValue);
     UIGraphicsBeginImageContextWithOptions(contextSize, YES, 1);
     CGRect drawingRect = CGRectMake(0, 0, contextSize.width, contextSize.height);
+    
+    //Now grab the snapshot of the detail view controllers content
     [self.detailViewController.view drawViewHierarchyInRect:drawingRect afterScreenUpdates:NO];
     UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    //Now get a sub-image of our snapshot. Just grab the portion of the shapshot that would be covered by the master view controller when it becomes visible.
+    //Pulling out the sub-image means we can supply an appropriately sized background image for the master controller, and makes application of the blur
+    //effect run faster since we are only only blurring image data that will actually be visible.
     CGRect subRect = CGRectMake(0, 0, self.view.frame.size.width / scaleValue, self.view.frame.size.height / scaleValue);
     CGImageRef subImage = CGImageCreateWithImageInRect(snapshotImage.CGImage, subRect);
     UIImage *backgroundImage = [UIImage imageWithCGImage:subImage];
     CGImageRelease(subImage);
     
+    //Now actually apply the blur to the snapshot and set the background behind our master view controller
     UIImage *darkImage = [backgroundImage applyDarkEffectWithTent:5];
     [(UIImageView *)self.tableView.backgroundView setImage:darkImage];
 }
